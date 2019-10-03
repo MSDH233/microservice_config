@@ -26,11 +26,7 @@ info:
   build.arttifacId: $project.artifactId$
   build.version: $project.version$
 
-
-
-
-
-------
+---
 
 spring:
   application:
