@@ -13,6 +13,17 @@ spring:
       initial-size: 5 #初始化连接数
       max-total: 5 #最大连接数
       max-wait-millis: 200 #等待最大超时时间
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka/,http://eureka7779.com:7779/eureka/,http://eureka7778.com:7779/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${servcer.port}
+    prefer-ip-address: true
+server:
+  port: 6222
+
+
 mybatis:
   mapper-locations:
   - classpath*:/mybatis/mapper/**/*.xml
@@ -43,6 +54,17 @@ spring:
       initial-size: 5 #初始化连接数
       max-total: 5 #最大连接数
       max-wait-millis: 200 #等待最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7777.com:7777/eureka/,http://eureka7779.com:7779/eureka/,http://eureka7778.com:7779/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${servcer.port}
+    prefer-ip-address: true
+server:
+  port: 6333
+
 mybatis:
   mapper-locations:
   - classpath*:/mybatis/mapper/**/*.xml
